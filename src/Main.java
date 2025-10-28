@@ -10,7 +10,7 @@
  * TODO-PRACTICE: Demonstrate explicit casting.
  * TODO-PRACTICE: Demonstrate implicit casting.
  */
-
+import java.util.Scanner;
 public class Main{
     public static void main(String [] args){
         // TODO: Declare variables of different data types.
@@ -20,13 +20,14 @@ public class Main{
         int gamesWon = 0;
         int gamesLost = 0;
         boolean playAgain = false;
+        Scanner scanner = new Scanner(System.in);
 
         // TODO: Create do-while loop (main game loop).
         do {
             // TODO: Call displayMenu() method.
             displayMenu(gamesWon, gamesLost);
             // TODO: Call getUserChoice() method.
-
+            int userChoice = getUserChoice(scanner);
             // TODO: Randomly generate computer choice.
 
             // TODO: Call evaluateRound() method.
@@ -50,7 +51,19 @@ public class Main{
         System.out.println("-------------------------");
     }
     // TODO: getUserChoice() - use Scanner to get user input.
-
+    private static int getUserChoice(Scanner scanner){
+        int userChoice;
+        System.out.println("0 - Rock");
+        System.out.println("1 - Paper");
+        System.out.println("2 - Scissors");
+        System.out.println("------------");
+        do {
+            System.out.print("Enter choice (0/1/2): ");
+            userChoice = scanner.nextInt();
+        }
+        while(userChoice != 0 && userChoice != 1 && userChoice != 2);
+        return userChoice;
+    }
     // TODO: evaluateRound() - decide who wins the round
 
     // TODO: playAgain() - Scanner + while loop (validation) for getting user choice.
