@@ -1,0 +1,42 @@
+/*
+ * PROJECT LEARNING CHECKLIST
+ * TODO-PRACTICE: Use Scanner to get input from the user.
+ * TODO-PRACTICE: Use different data types (int for menu, double for values, boolean for loop).
+ * TODO-PRACTICE: Use a do-while loop for the main program menu.
+ * TODO-PRACTICE: Use a switch statement for menu selection.
+ * TODO-PRACTICE: Use if-else statements for input validation.
+ * TODO-PRACTICE: Use regular while loop.
+ * TODO-PRACTICE: Create and call at least 3 different methods.
+ * TODO-PRACTICE: Demonstrate explicit casting.
+ * TODO-PRACTICE: Demonstrate implicit casting.
+ */
+
+public class Main{
+    public static void main(String [] args){
+        // TODO: Declare variables of different data types.
+
+        // TODO: Create do-while loop (main game loop).
+            // TODO: Call displayMenu() method.
+
+            // TODO: Call getUserChoice() method.
+
+            // TODO: Randomly generate computer choice.
+
+            // TODO: Call evaluateRound() method.
+
+            // TODO: Switch statement to display result.
+
+            // TODO: Call playAgain() method.
+
+        // TODO: Use implicit casting for game results.
+    }
+
+    // == Methods ==
+    // TODO: displayMenu() - print the user input menu.
+
+    // TODO: getUserChoice() - use Scanner to get user input.
+
+    // TODO: evaluateRound() - decide who wins the round
+
+    // TODO: playAgain() - Scanner + while loop (validation) for getting user choice.
+}
