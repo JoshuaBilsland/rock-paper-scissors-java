@@ -14,6 +14,12 @@
 public class Main{
     public static void main(String [] args){
         // TODO: Declare variables of different data types.
+        final int ROCK = 0;
+        final int PAPER = 1;
+        final int SCISSORS = 2;
+        int gamesWon = 0;
+        int gamesLost = 0;
+        boolean playAgain;
 
         // TODO: Create do-while loop (main game loop).
             // TODO: Call displayMenu() method.
