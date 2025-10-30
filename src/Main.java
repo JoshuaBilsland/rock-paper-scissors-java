@@ -11,6 +11,7 @@
  * TODO-PRACTICE: Demonstrate implicit casting.
  */
 import java.util.Scanner;
+import java.util.Random;
 public class Main{
     public static void main(String [] args){
         // TODO: Declare variables of different data types.
@@ -29,7 +30,8 @@ public class Main{
             // TODO: Call getUserChoice() method.
             int userChoice = getUserChoice(scanner);
             // TODO: Randomly generate computer choice.
-
+            Random random = new Random();
+            int computerChoice = random.nextInt(0,3);
             // TODO: Call evaluateRound() method.
 
             // TODO: Switch statement to display result.
