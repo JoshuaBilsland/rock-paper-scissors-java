@@ -33,7 +33,7 @@ public class Main{
             Random random = new Random();
             int computerChoice = random.nextInt(0,3);
             // TODO: Call evaluateRound() method.
-
+            int result = evaluateRound(userChoice, computerChoice);
             // TODO: Switch statement to display result.
 
             // TODO: Call playAgain() method.
@@ -67,6 +67,14 @@ public class Main{
         return userChoice;
     }
     // TODO: evaluateRound() - decide who wins the round
-
+    private static int evaluateRound(int userChoice, int computerChoice){
+        /*
+        Take advantage of the cycle of rock-paper-scissors.
+        0 = Draw
+        1 = Player 1 (User) wins
+        2 = Player 2 (Computer) wins
+        */
+        return ((userChoice - computerChoice) + 3) % 3;
+    }
     // TODO: playAgain() - Scanner + while loop (validation) for getting user choice.
 }
