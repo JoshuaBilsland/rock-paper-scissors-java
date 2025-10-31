@@ -58,6 +58,30 @@ public class Main{
         }
         while (playAgain);
         // TODO: Use implicit casting for game results.
+        System.out.println("====================");
+        System.out.println("    GAME SUMMARY    ");
+        System.out.println("====================");
+        int totalGames = gamesWon + gamesLost + gamesDrawn;
+        System.out.println("Total games played: " + totalGames);
+        System.out.println("Games won: " + gamesWon);
+        System.out.println("Games lost: " + gamesLost);
+        System.out.println("Games drawn: " + gamesDrawn);
+
+        // Implicit casting (int to a double)
+        // It is a safe, widening conversion (e.g, 5 -> 5.0)
+        double totalGamesAsDouble = totalGames;
+
+        // Explicit casting
+        // Telling the complier to cast gamesWon to a double before evaluating the expression
+        // Otherwise, you would be doing an integer division and then casting the result to a double
+        double winPercentage = ((double) gamesWon / totalGamesAsDouble) * 100;
+        System.out.println("You win percentage is " + winPercentage + "%");
+
+        // 300 in binary = 00000000000000000000000100101100
+        // When casting an int to a byte, only the 8 bits on the right are kept.
+        // 00101100 = 44 (which is what is printed)
+        byte percentageAsByte = (byte) 300;
+        System.out.println(percentageAsByte);
     }
 
     // == Methods ==
