@@ -53,7 +53,8 @@ public class Main{
                     gamesLost += 1;
                     break;
             }
-            // TODO: Call playAgain() method.
+            // TODO: Call askPlayAgain() method.
+            playAgain = askPlayAgain(scanner);
         }
         while (playAgain);
         // TODO: Use implicit casting for game results.
@@ -80,6 +81,7 @@ public class Main{
         do {
             System.out.print("Enter choice (0/1/2): ");
             userChoice = scanner.nextInt();
+            scanner.skip("\n");  // Clear \n from scanner buffer
         }
         while(userChoice != 0 && userChoice != 1 && userChoice != 2);
         return userChoice;
@@ -104,5 +106,18 @@ public class Main{
             default -> "Invalid Choice!";
         };
     }
-    // TODO: playAgain() - Scanner + while loop (validation) for getting user choice.
+    // TODO: askPlayAgain() - Scanner + while loop (validation) for getting user choice.
+    private static boolean askPlayAgain(Scanner scanner) {
+        while (true) {
+            System.out.print("Do you want to play another round? (y/n): ");
+            String userInput = scanner.nextLine().trim().toLowerCase();
+            if (userInput.equals("y")) {
+                return true;
+            }
+            else if (userInput.equals("n")) {
+                return false;
+            }
+            System.out.println("ERROR: Invalid Input! Please enter 'y' or 'n'.");
+        }
+    }
 }
