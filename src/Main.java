@@ -35,6 +35,9 @@ public class Main{
             int computerChoice = random.nextInt(0,3);
             // TODO: Call evaluateRound() method.
             int result = evaluateRound(userChoice, computerChoice);
+            // TODO: Call getChoiceName() method.
+            System.out.println("You chose: " + getChoiceName(userChoice));
+            System.out.println("Computer chose: " + getChoiceName(computerChoice));
             // TODO: Switch statement to display result.
             switch(result) {
                 case 0:
@@ -89,6 +92,16 @@ public class Main{
         2 = Player 2 (Computer) wins
         */
         return ((userChoice - computerChoice) + 3) % 3;
+    }
+
+    // TODO: getChoiceName() - get the name (rock, paper, scissors) for chosen number
+    private static String getChoiceName(int choice) {
+        return switch (choice) {
+            case ROCK -> "Rock";
+            case PAPER -> "Paper";
+            case SCISSORS -> "Scissors";
+            default -> "Invalid Choice!";
+        };
     }
     // TODO: playAgain() - Scanner + while loop (validation) for getting user choice.
 }
