@@ -13,13 +13,14 @@
 import java.util.Scanner;
 import java.util.Random;
 public class Main{
+    private static final int ROCK = 0;
+    private static final int PAPER = 1;
+    private static final int SCISSORS = 2;
     public static void main(String [] args){
         // TODO: Declare variables of different data types.
-        final int ROCK = 0;
-        final int PAPER = 1;
-        final int SCISSORS = 2;
         int gamesWon = 0;
         int gamesLost = 0;
+        int gamesDrawn = 0;
         boolean playAgain = false;
         Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +36,20 @@ public class Main{
             // TODO: Call evaluateRound() method.
             int result = evaluateRound(userChoice, computerChoice);
             // TODO: Switch statement to display result.
-
+            switch(result) {
+                case 0:
+                    System.out.println("It is a draw!");
+                    gamesDrawn += 1;
+                    break;
+                case 1:
+                    System.out.println("You win!");
+                    gamesWon += 1;
+                    break;
+                case 2:
+                    System.out.println("You lose!");
+                    gamesLost += 1;
+                    break;
+            }
             // TODO: Call playAgain() method.
         }
         while (playAgain);
