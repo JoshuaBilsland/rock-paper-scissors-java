@@ -27,7 +27,7 @@ public class Main{
         // TODO: Create do-while loop (main game loop).
         do {
             // TODO: Call displayMenu() method.
-            displayMenu(gamesWon, gamesLost);
+            displayMenu(gamesWon, gamesLost, gamesDrawn);
             // TODO: Call getUserChoice() method.
             int userChoice = getUserChoice(scanner);
             // TODO: Randomly generate computer choice.
@@ -61,12 +61,13 @@ public class Main{
 
     // == Methods ==
     // TODO: displayMenu() - print current scores menu
-    private static void displayMenu(int gamesWon, int gamesLost){
+    private static void displayMenu(int gamesWon, int gamesLost, int gamesDrawn){
         System.out.println("Rock-Paper-Scissors Game!");
         System.out.println("-------------------------");
         System.out.println("Current Scores:");
         System.out.println("\tGames won: " + gamesWon);
         System.out.println("\tGames lost: " + gamesLost);
+        System.out.println("\tGames drawn: " + gamesDrawn);
         System.out.println("-------------------------");
     }
     // TODO: getUserChoice() - use Scanner to get user input.
